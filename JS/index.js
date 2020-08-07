@@ -25,6 +25,7 @@ document.querySelector("button").addEventListener("click", () => {
         alert(`You can only input numbers between 10 and 200!`);
         document.querySelector("input[type=text]").value = "";
     } else {
+        Math.floor(inputInNum);
         let i = 0;
         let a = setInterval(() => {
             i++;
