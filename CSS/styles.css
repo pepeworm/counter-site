@@ -1,0 +1,92 @@
+body {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 3rem 0 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+p {
+    width: 35%;
+    margin: 0 auto 3rem;
+    color: #dadada;
+}
+
+.container {
+    background-color: #2d2d2d;
+    display: inline-block;
+    padding: 3% 5% 0;
+    border-radius: 0.4rem;
+}
+
+label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+}
+
+input {
+    font-family: "Montserrat";
+    font-weight: 500;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0.5rem 0.7rem;
+    margin: 0 0 0 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background: #ff464e;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+button:focus {
+    outline: none;
+}
+
+.code-btn {
+    display: inline-block;
+    margin-top: 3rem;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+}
+
+.code-btn:hover {
+    background: #fff;
+    color: #ff464e;
+    font-weight: 500;
+}
+
+.push {
+    margin-top: 2rem;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
