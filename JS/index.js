@@ -1,49 +1,36 @@
-const counter = document.querySelector("#counter-number");
-const submitBtn = document.querySelector("button");
+<!DOCTYPE html>
+<html lang="en">
 
-submitBtn.classList.add("disabled");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
 
-document.querySelector(".error-msg").classList.remove("push");
-document.querySelector(".error-msg").value = "";
+<body>
+    <h1>Counter</h1>
 
-document.querySelector("input[type=text]").addEventListener("input", (e) => {
-    const inputValue = document.querySelector("input[type=text]").value.trim();
+    <h3>How the counter works:</h3>
+    <p>Enter any number between <strong>10</strong> and <strong>200</strong> and the counter below will count from 0 to
+        the number you inputted!</p>
 
-    if (inputValue) {
-        submitBtn.classList.remove("disabled");
-    } else {
-        submitBtn.classList.add("disabled");
-    }
-});
+    <div class="container">
+        <div class="counter">
+            <label for="number-input">Enter a number: </label>
+            <input type="text" name="number" id="number-input" placeholder="Number" autocomplete="off" required>
+            <button type="submit">Start Counting!</button>
+            <p id="counter-number" class="push"></p>
+        </div>
+    </div>
 
-document.querySelector("button").addEventListener("click", () => {
-    counter.classList.add("push");
-    const inputInNum = parseFloat(
-        document.querySelector("input[type=text]").value
-    );
-    if (isNaN(inputInNum)) {
-        document.querySelector(".error-msg").value = "You can only input numbers between 10 and 200!";
-        setTimeout(() => {
-            document.querySelector("input[type=text]").value = "";
-        }, 800)
-    } else if (inputInNum < 10 || inputInNum > 200) {
-        document.querySelector(".error-msg").value = "You can only input numbers between 10 and 200!";
-        setTimeout(() => {
-            document.querySelector("input[type=text]").value = "";
-        }, 800)
-    } else {
-        const toInt = Math.floor(inputInNum);
-        let i = 0;
-        let a = setInterval(() => {
-            i++;
-            counter.textContent = i;
-            if (i === toInt) {
-                clearInterval(a);
-                setTimeout(() => {
-                    counter.textContent = ``;
-                    document.querySelector("input[type=text]").value = "";
-                }, 400);
-            }
-        }, 300);
-    }
-});
+    <br>
+    <a href="https://github.com/pepeworm/counter-site" class="code-btn" target="_blank">Source Code</a>
+
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
