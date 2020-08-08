@@ -86,6 +86,11 @@ button:focus {
     margin-top: 2rem;
 }
 
+.alert-push {
+    margin-top: 2rem;
+    width: 100%;
+}
+
 .disabled {
     opacity: 0.5;
     pointer-events: none;

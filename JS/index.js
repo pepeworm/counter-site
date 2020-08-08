@@ -1,6 +1,8 @@
 const counter = document.querySelector("#counter-number");
 const submitBtn = document.querySelector("button");
 
+const alertMsg = document.querySelector(".alert-push");
+
 submitBtn.classList.add("disabled");
 
 document.querySelector("input[type=text]").addEventListener("input", (e) => {
@@ -19,10 +21,16 @@ document.querySelector("button").addEventListener("click", () => {
         document.querySelector("input[type=text]").value
     );
     if (isNaN(inputInNum)) {
-        alert("That is not a number!");
+        alertMsg.textContent = `That is not a number!`;
+        setTimeout(() => {
+            alertMsg.textContent = ``;
+        }, 1000)
         document.querySelector("input[type=text]").value = "";
     } else if (inputInNum < 10 || inputInNum > 200) {
-        alert(`You can only input numbers between 10 and 200!`);
+        alertMsg.textContent = `You can only input numbers between 10 and 200!`;
+        setTimeout(() => {
+            alertMsg.textContent = ``;  
+        }, 1500);
         document.querySelector("input[type=text]").value = "";
     } else {
         const toInt = Math.floor(inputInNum);
