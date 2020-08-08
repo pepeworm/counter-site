@@ -33,6 +33,7 @@ document.querySelector("button").addEventListener("click", () => {
         }, 1500);
         document.querySelector("input[type=text]").value = "";
     } else {
+        submitBtn.classList.add("disabled"); 
         const toInt = Math.floor(inputInNum);
         let i = 0;
         let a = setInterval(() => {
@@ -40,6 +41,7 @@ document.querySelector("button").addEventListener("click", () => {
             counter.textContent = i;
             if (i === toInt) {
                 clearInterval(a);
+                submitBtn.classList.remove("disabled");
                 setTimeout(() => {
                     counter.textContent = ``;
                     document.querySelector("input[type=text]").value = "";
